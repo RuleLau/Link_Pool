@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding =  "utf-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure>
+    <New id="dataSource" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/sampleDS</Arg>
+        <Arg>
+            <New class="org.sqlite.SQLiteDataSource">
+                <Set name = "url">jdbc:sqlite:data.sqlite</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>
